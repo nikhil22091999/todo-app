@@ -70,7 +70,7 @@ export default class Todo extends Component {
                 )}
                                         <td>
                                             <Link to={`/edit/${todo.id}`} className="editLink" style={{textDecoration:"none",listStyle:"none",marginRight:"5px"}}>Edit</Link>
-                                            <button onClick={this.handleDeleteClick} style={{border:"none",color:"red",background:"transparent",fontWeight:"bold",fontSize:"14px"}}>Delete</button>
+                                            <button onClick={this.handleDeleteClick} style={{cursor:"pointer",border:"none",color:"red",background:"transparent",fontWeight:"bold",fontSize:"14px"}}>Delete</button>
                                         </td>
                                         
                                     </tr>
