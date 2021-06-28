@@ -49,10 +49,25 @@ export default class Todo extends Component {
                                     <tr key={todo.id}>
                                         <td>{todo.id}</td>
                                         <td>{todo.title}</td>
-                                        {todo.completed === true ?
-                                            <td>Completed</td> :
-                                            <td>Pending</td>  
-                                        }
+                                        {todo.completed === true ? (
+                  <td
+                    style={{
+                      backgroundColor: "rgba(209, 250, 229)",
+                      color: "rgba(6, 95, 70)",
+                    }}
+                  >
+                    Completed
+                  </td>
+                ) : (
+                  <td
+                    style={{
+                      backgroundColor: "rgba(254, 243, 199)",
+                      color: "rgba(146, 64, 14)",
+                    }}
+                  >
+                    Pending
+                  </td>
+                )}
                                         <td>
                                             <Link to={`/edit/${todo.id}`} className="editLink" style={{textDecoration:"none",listStyle:"none",marginRight:"5px"}}>Edit</Link>
                                             <button onClick={this.handleDeleteClick} style={{border:"none",color:"red",background:"transparent",fontWeight:"bold",fontSize:"14px"}}>Delete</button>
